@@ -10,110 +10,97 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #101214;
-    color: #7A7C80;
+    background-color: #222831;
+    color: darkgray;
 
 }
 
 h1, .white {
-    color: #fff;
+    color: #ffd369;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
 h2, .white {
-    color: #fff;
+    color: #ffd369;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
 a {
-    color: #7A7C80;
+    color: #eeeeee;
     text-decoration: none;
-}
-
-skill {
-    color: #7A7C80;
-    text-decoration: none;
-}
-
-/* section 1 */
-.section-1 {
-    padding-top: 25vh;
-    text-align: center;
-}
-
-.section-1 p {
-    font-size: 1.2rem;
-    padding-bottom: 10px;
-    margin: 0;
-}
-
-.section-1 h1 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.section-1 h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.section-1 a {
-    color: darkgray;
-    font-size: 1.6rem;
-    padding: 10px;
-}
-
-/* section 2 */
-.section-2 {
-    padding-top: 10vh;
-    width: 70%;
-}
-
-.section-2 h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.section-2 p {
-    font-size: 1.2rem;
-    padding-bottom: 10px;
-    margin: 0;
-}
-
-.section-2 a {
-    color: darkgray;
     padding: 2px;
     font-size: 1.2rem;
 }
 
-.section-2 i {
-    padding: 5px;
+skill {
+    text-decoration: none;
+}
+
+/* section left */
+.section-left {
+    padding-top: 25vh;
+    text-align: center;
+}
+
+.section-left p {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.section-left a {
+    font-size: 1.6rem;
+    padding: 12px;
+}
+
+/* section right */
+.section-right {
+    padding-top: 10vh;
+    width: 70%;
+}
+
+.section-right p {
+    padding: 5px 5px 5px 0;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.section-right i {
+    padding: 5px 5px 5px 0;
     font-size: 1.4rem;
 }
 
-.section-2 skill {
+.section-right skill {
     cursor: default;
-    padding: 5px;
+    padding: 5px 5px 5px 0;
     font-size: 1.2rem;
 }
 
+/* section extra */
+.section-extra i {
+    color: #eeeeee;
+    padding: 5px 5px 5px 0;
+    font-size: 1.4rem;
+}
+
+
 /* animations / utilities */
-.section-2 a:hover {
-    color: #fff;
+.section-right a:hover {
+    color: lightblue;
     cursor: pointer;
     transition: 0.2s;
 }
 
-.section-2 i:hover {
-    color: #fff;
-    transition: 0.3s;
+.section-extra i:hover {
+    color: lightblue;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.section-2 skill:hover {
-    color: #fff;
-    transition: 0.3s;
-}
-
-.section-1 a:hover {
-    color: #fff;
+.section-left a:hover {
+    color: lightblue;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -129,12 +116,12 @@ skill {
         grid-template-columns: 1fr;
     }
 
-    .section-1 {
+    .section-left {
         padding: 0;
         padding-top: 5rem;
     }
 
-    .section-2 {
+    .section-right {
         padding: 0;
         padding-left: 1.5rem;
         padding-top: 2rem;
