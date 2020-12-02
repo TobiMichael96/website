@@ -35,7 +35,18 @@ a {
 }
 
 skill {
+    font-size: 1.2rem;
     text-decoration: none;
+    padding: 15px;
+}
+
+i {
+    font-size: 1.4rem;
+}
+
+p {
+    padding: 5px 5px 5px 0;
+    font-size: 1.2rem;
 }
 
 /* section left */
@@ -44,16 +55,11 @@ skill {
     text-align: center;
 }
 
-.section-left p {
-    font-size: 1.2rem;
-    padding-bottom: 10px;
-    margin: 0;
+.section-left i {
+    font-size: 1.6rem;
+    padding: 15px;
 }
 
-.section-left a {
-    font-size: 1.6rem;
-    padding: 12px;
-}
 
 /* section right */
 .section-right {
@@ -61,49 +67,62 @@ skill {
     width: 70%;
 }
 
-.section-right p {
-    padding: 5px 5px 5px 0;
-    font-size: 1.2rem;
-    margin: 0;
-}
-
 .section-right i {
     padding: 5px 5px 5px 0;
-    font-size: 1.4rem;
 }
 
-.section-right skill {
-    cursor: default;
-    padding: 5px 5px 5px 0;
-    font-size: 1.2rem;
-}
 
 /* section extra */
+.section-extra {
+    margin: 5px 5px 5px -15px;
+    width: 70%;
+}
+
 .section-extra i {
     color: #eeeeee;
-    padding: 5px 5px 5px 0;
-    font-size: 1.4rem;
+    padding: 15px;
 }
 
+
+/* section list */
+.section-list {
+    margin: 5px 5px 5px -15px;
+}
+
+.section-list skill {
+}
+
+.section-list i {
+    padding: 15px;
+}
 
 /* animations / utilities */
-.section-right a:hover {
-    color: lightblue;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
 .section-extra i:hover {
     color: lightblue;
     cursor: pointer;
-    transition: 0.2s;
+    transform: scale(1.5);
+    transition: 0.3s;
 }
 
-.section-left a:hover {
+.section-left i:hover {
+    color: lightblue;
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+
+a:hover {
     color: lightblue;
     cursor: pointer;
     transition: 0.3s;
 }
+
+/*
+i:hover {
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+*/
 
 .white:hover {
     position: relative;
@@ -116,19 +135,26 @@ skill {
         grid-template-columns: 1fr;
     }
 
+    body {
+        text-align: center;
+    }
+
     .section-left {
-        padding: 0;
-        padding-top: 5rem;
+        padding: 5rem 0 0;
     }
 
     .section-right {
-        padding: 0;
-        padding-left: 1.5rem;
-        padding-top: 2rem;
+        padding: 2rem 0 0 1.5rem;
+        width: 80%;
+    }
+
+    .section-list {
+        margin: 0;
     }
 
     .section-extra {
-        padding: 0;
-        padding-left: 1.5rem;
+        padding: 0 0 0 1.5rem;
+        margin: 0;
+        width: 80%;
     }
 }
