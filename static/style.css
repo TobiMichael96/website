@@ -126,4 +126,10 @@ skill {
         padding-left: 1.5rem;
         padding-top: 2rem;
     }
+
+    .section-extra {
+        padding: 0;
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+    }
 }
