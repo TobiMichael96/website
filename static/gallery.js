@@ -20,18 +20,10 @@ function show(imgs) {
     imgText.innerHTML = imgs.alt;
 
     if (className === "portrait") {
-        if (width > 800) {
-            expandImg.parentElement.style.width = "22%";
-        } else {
-            expandImg.parentElement.style.width = "70%";
-        }
+        expandImg.parentElement.style.width = "22%";
         expandImg.parentElement.style.paddingTop = "10px";
     } else if (className === "portrait_alt") {
-        if (width > 800) {
-            expandImg.parentElement.style.width = "27%";
-        } else {
-            expandImg.parentElement.style.width = "80%";
-        }
+        expandImg.parentElement.style.width = "27%";
         expandImg.parentElement.style.paddingTop = "10px";
     } else if (className === "square") {
         expandImg.parentElement.style.width = "43%";
@@ -40,6 +32,12 @@ function show(imgs) {
         expandImg.parentElement.style.paddingTop = "80px";
         expandImg.parentElement.style.width = "93%";
     }
+
+    if (width < 800) {
+        expandImg.parentElement.style.width = "80%";
+        expandImg.parentElement.style.paddingTop = "50px";
+    }
+
     // Show the container element (hidden with CSS)
     expandImg.parentElement.parentElement.style.display = "block";
     gallery.style.display = "none";
