@@ -12,27 +12,47 @@
 </head>
 
 <body>
-<div class="home">
-    <a href="http://localhost:63342/Website/static/index.html?_ijt=ltpn336fp05jfm8jp6d60geamu">
-        <img alt="Logo" src="https://www.tobiasmichael.de/images/my-fav.png" oncontextmenu="return false">
+<div class="home" id="home">
+    <a href="https://www.tobiasmichael.de/">
+        <img alt="Home" src="https://www.tobiasmichael.de/images/my-fav.png" oncontextmenu="return false">
     </a>
 </div>
-<div class="gallery" oncontextmenu="return false">
-    <figure class="square"><img src="https://www.tobiasmichael.de/images/my-fav.png" alt="White"
-                                onclick="toggle(this);"></figure>
-    <figure class="square"><img src="https://www.tobiasmichael.de/images/my-fav-black.png" alt="Black"
-                                onclick="toggle(this);"></figure>
-    <figure class="four"><img src="https://www.teltarif.de/arch/2020/kw14/samsung-galaxy-s10-plus-hochformat-16-9.jpg" alt="Lights"
-                                onclick="toggle(this);"></figure>
-    <figure class="sixteen"><img src="https://trendblog.euronics.de/wp-content/uploads/2017/01/Seitenverhaeltnis_16_9.jpg" alt="Nature"
-                                  onclick="toggle(this);"></figure>
-    <figure class="sixteen"><img src="https://trendblog.euronics.de/wp-content/uploads/2017/01/Seitenverhaeltnis_16_9.jpg" alt="Lights"
-                                  onclick="toggle(this);"></figure>
+<div class="gallery" id="gallery" oncontextmenu="return false">
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/kZGkUF4FahoI.jpg" alt="Munich Olympia Tower"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/VrqUVIQSXhWn.jpg" alt="Bernried Dock"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/yegsbYZU9RBz.jpg" alt="Bernried Lake #1"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/OUKcl6m0C2gH.jpg" alt="Bernried Lake #2"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait"><img src="https://pic.tobiasmichael.de/JVbPZ3ICUK0t.jpg" alt="Munich"
+                                  onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/vDy8MZRSpctD.jpg" alt="Station Westfriedhof"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/0qYEy1SMkBrL.jpg" alt="Munich Sundown #1"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait"><img src="https://pic.tobiasmichael.de/rrpRqNDkWAdc.jpg" alt="Munich Sundown #2"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait"><img src="https://pic.tobiasmichael.de/5g1HbwMkeB2U.jpg" alt="Munich Forest"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/9nQ2p7xcWp8m.jpg" alt="Ravine"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/Hw7tMXmbeqxp.jpg" alt="Cow"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/UIzIYeUGczM9.jpg" alt="Bernried Nature #1"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/5yWX27qeVkvJ.jpg" alt="Bernried Nature #2"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/zzLWIYRXOR1j.jpg" alt="Lake Garda"
+                                      onclick="show(this);"></figure>
 </div>
 
-<div class="container" oncontextmenu="return false">
-    <img id="expandedImg" style="width:100%" onclick="this.parentElement.style.display='none'">
-    <div id="imgtext"></div>
+<div class="container" id="Container" oncontextmenu="return false" onclick="hide(this);">
+    <div class="imageContainer" id="ImageContainer">
+        <img id="expandedImg" alt="Image" src="">
+        <div class="text-block" id="imgText"></div>
+    </div>
 </div>
 </body>
 </html>

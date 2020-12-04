@@ -1,17 +1,45 @@
-function toggle(imgs) {
+function show(imgs) {
+    // Get the gallery
+    const home = document.getElementById("home");
+    // Get the gallery
+    const gallery = document.getElementById("gallery");
     // Get the expanded image
     const expandImg = document.getElementById("expandedImg");
+    // Get the expanded image parent class name
+    const className = imgs.parentElement.className;
     // Get the image text
-    const imgText = document.getElementById("imgtext");
+    const imgText = document.getElementById("imgText");
     // Use the same src in the expanded image as the image being clicked on from the grid
     expandImg.src = imgs.src;
     // Use the value of the alt attribute of the clickable image as text inside the expanded image
-    if (imgText.innerHTML === imgs.alt) {
-        imgText.innerHTML = ""
-        expandImg.parentElement.style.display = "none";
-        return
-    }
     imgText.innerHTML = imgs.alt;
+
+    if (className === "portrait") {
+        expandImg.parentElement.style.width = "22%";
+        expandImg.parentElement.style.paddingTop = "10px";
+    } else if (className === "portrait_alt") {
+        expandImg.parentElement.style.width = "27%";
+        expandImg.parentElement.style.paddingTop = "10px";
+    } else if (className === "square") {
+        expandImg.parentElement.style.width = "43%";
+        expandImg.parentElement.style.paddingTop = "70px";
+    } else {
+        expandImg.parentElement.style.paddingTop = "80px";
+        expandImg.parentElement.style.width = "93%";
+    }
     // Show the container element (hidden with CSS)
-    expandImg.parentElement.style.display = "block";
+    expandImg.parentElement.parentElement.style.display = "block";
+    gallery.style.display = "none";
+    home.style.display = "none";
+}
+
+function hide(image) {
+    // Get the gallery
+    const home = document.getElementById("home");
+    // Get the gallery
+    const gallery = document.getElementById("gallery");
+
+    gallery.style.display = "grid";
+    home.style.display = "block";
+    image.style.display='none';
 }
