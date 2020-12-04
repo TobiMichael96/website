@@ -12,7 +12,6 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #222831;
     color: darkgray;
-
 }
 
 h1, .white {
@@ -129,7 +128,7 @@ i:hover {
     padding-left: 10px;
 }
 
-/* media queres */
+/* media */
 @media (max-width: 780px) {
     .grid-2 {
         grid-template-columns: 1fr;

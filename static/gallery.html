@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="gallery.css">
+    <script src="gallery.js"></script>
+    <link rel="icon" href="https://www.tobiasmichael.de/images/my-fav.png">
+    <title>TM</title>
+</head>
+
+<body>
+<div class="home" id="home">
+    <a href="https://www.tobiasmichael.de/">
+        <img alt="Home" src="https://www.tobiasmichael.de/images/my-fav.png" oncontextmenu="return false">
+    </a>
+</div>
+<div class="gallery" id="gallery" oncontextmenu="return false">
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/kZGkUF4FahoI.jpg" alt="Munich Olympia Tower"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/VrqUVIQSXhWn.jpg" alt="Bernried Dock"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/yegsbYZU9RBz.jpg" alt="Bernried Lake #1"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/OUKcl6m0C2gH.jpg" alt="Bernried Lake #2"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait"><img src="https://pic.tobiasmichael.de/JVbPZ3ICUK0t.jpg" alt="Munich"
+                                  onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/vDy8MZRSpctD.jpg" alt="Station Westfriedhof"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/0qYEy1SMkBrL.jpg" alt="Munich Sundown #1"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait"><img src="https://pic.tobiasmichael.de/rrpRqNDkWAdc.jpg" alt="Munich Sundown #2"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait"><img src="https://pic.tobiasmichael.de/5g1HbwMkeB2U.jpg" alt="Munich Forest"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/9nQ2p7xcWp8m.jpg" alt="Ravine"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/Hw7tMXmbeqxp.jpg" alt="Cow"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/UIzIYeUGczM9.jpg" alt="Bernried Nature #1"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/5yWX27qeVkvJ.jpg" alt="Bernried Nature #2"
+                                      onclick="show(this);"></figure>
+    <figure class="portrait_alt"><img src="https://pic.tobiasmichael.de/zzLWIYRXOR1j.jpg" alt="Lake Garda"
+                                      onclick="show(this);"></figure>
+</div>
+
+<div class="container" id="Container" oncontextmenu="return false" onclick="hide(this);">
+    <div class="imageContainer" id="ImageContainer">
+        <img id="expandedImg" alt="Image" src="">
+        <div class="text-block" id="imgText"></div>
+    </div>
+</div>
+</body>
+</html>
