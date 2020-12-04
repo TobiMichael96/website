@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="gallery.css">
+    <script src="gallery.js"></script>
+    <link rel="icon" href="https://www.tobiasmichael.de/images/my-fav.png">
+    <title>TM</title>
+</head>
+
+<body>
+<div class="home">
+    <a href="http://localhost:63342/Website/static/index.html?_ijt=ltpn336fp05jfm8jp6d60geamu">
+        <img alt="Logo" src="https://www.tobiasmichael.de/images/my-fav.png" oncontextmenu="return false">
+    </a>
+</div>
+<div class="gallery" oncontextmenu="return false">
+    <figure class="square"><img src="https://www.tobiasmichael.de/images/my-fav.png" alt="White"
+                                onclick="toggle(this);"></figure>
+    <figure class="square"><img src="https://www.tobiasmichael.de/images/my-fav-black.png" alt="Black"
+                                onclick="toggle(this);"></figure>
+    <figure class="four"><img src="https://www.teltarif.de/arch/2020/kw14/samsung-galaxy-s10-plus-hochformat-16-9.jpg" alt="Lights"
+                                onclick="toggle(this);"></figure>
+    <figure class="sixteen"><img src="https://trendblog.euronics.de/wp-content/uploads/2017/01/Seitenverhaeltnis_16_9.jpg" alt="Nature"
+                                  onclick="toggle(this);"></figure>
+    <figure class="sixteen"><img src="https://trendblog.euronics.de/wp-content/uploads/2017/01/Seitenverhaeltnis_16_9.jpg" alt="Lights"
+                                  onclick="toggle(this);"></figure>
+</div>
+
+<div class="container" oncontextmenu="return false">
+    <img id="expandedImg" style="width:100%" onclick="this.parentElement.style.display='none'">
+    <div id="imgtext"></div>
+</div>
+</body>
+</html>

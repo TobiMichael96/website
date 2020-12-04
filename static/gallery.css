@@ -1,0 +1,87 @@
+/* global */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #222831;
+    color: #ffd369;
+    font-size: 1.3rem;
+    width: calc(100vw - 34px)
+}
+
+.gallery {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 5px;
+    grid-auto-flow: dense;
+}
+
+.gallery figure {
+    border: 1px solid #eeeeee;
+    position: relative;
+    margin: 0;
+    counter-increment: posMarkup;
+    max-width: 200px;
+    max-height: 200px;
+}
+.gallery figure.sixteen {
+    width: 200px;
+    height: 300px;
+    grid-column-end: span 3;
+}
+
+.gallery figure.four {
+    width: 300px;
+    height: 600px;
+    grid-column-end: span 4;
+}
+
+.gallery figure.square {
+    width: auto;
+    height: 200px;
+    grid-column-end: span 4;
+}
+
+.gallery figure img {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+}
+
+.gallery figure::after {
+    position: absolute;
+    bottom: 0;
+    left: 0.2em;
+    color: red;
+    font-size:2em;
+}
+
+.home {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.home img {
+    width: 5%;
+}
+
+.home img:hover {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* The expanding image container */
+.container {
+    padding-top: 30px;
+    position: relative;
+    display: none;
+    max-width: 500px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
