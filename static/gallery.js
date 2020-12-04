@@ -1,4 +1,9 @@
 function show(imgs) {
+    // Get screen width
+    const width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
     // Get the gallery
     const home = document.getElementById("home");
     // Get the gallery
@@ -15,10 +20,18 @@ function show(imgs) {
     imgText.innerHTML = imgs.alt;
 
     if (className === "portrait") {
-        expandImg.parentElement.style.width = "22%";
+        if (width > 800) {
+            expandImg.parentElement.style.width = "22%";
+        } else {
+            expandImg.parentElement.style.width = "70%";
+        }
         expandImg.parentElement.style.paddingTop = "10px";
     } else if (className === "portrait_alt") {
-        expandImg.parentElement.style.width = "27%";
+        if (width > 800) {
+            expandImg.parentElement.style.width = "27%";
+        } else {
+            expandImg.parentElement.style.width = "80%";
+        }
         expandImg.parentElement.style.paddingTop = "10px";
     } else if (className === "square") {
         expandImg.parentElement.style.width = "43%";
