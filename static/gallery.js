@@ -56,9 +56,9 @@ function hide(image) {
     home.style.display = "block";
     image.style.display='none';
 
-    if (width > 780) {
-        document.body.style.width = "calc(100vw - 34px)";
-    }
+    // if (width > 780) {
+    //     document.body.style.width = "calc(100vw - 34px)";
+    // }
 
     // Restore scroll position
     document.scrollingElement.scroll(0, localStorage.getItem('scrollPosition')|0)
