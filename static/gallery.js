@@ -104,6 +104,5 @@ window.onscroll = function () {
     // Save scroll position
     if (document.scrollingElement.scrollTop > 0) {
         localStorage.setItem('scrollPosition', document.scrollingElement.scrollTop.toString())
-        console.log(document.scrollingElement.scrollTop)
     }
 }
