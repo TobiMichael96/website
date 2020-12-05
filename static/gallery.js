@@ -59,6 +59,9 @@ function hide(image) {
     if (width > 780) {
         document.body.style.width = "calc(100vw - 34px)";
     }
+
+    // Restore scroll position
+    document.scrollingElement.scroll(0, localStorage.getItem('scrollPosition')|0)
 }
 
 function resize() {
@@ -95,4 +98,12 @@ function resize() {
 
 window.onresize = function () {
     resize()
+}
+
+window.onscroll = function () {
+    // Save scroll position
+    if (document.scrollingElement.scrollTop > 0) {
+        localStorage.setItem('scrollPosition', document.scrollingElement.scrollTop.toString())
+        console.log(document.scrollingElement.scrollTop)
+    }
 }
