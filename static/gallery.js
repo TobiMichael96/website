@@ -35,6 +35,10 @@ function show(imgs) {
         const imageHeight = expandImg.clientHeight
         const top = (height - (imageHeight + 60)) / 2
         imageContainer.style.marginTop = top.toString() + "px";
+    } else {
+        imageContainer.style.height = (height * 0.94).toString() + "px";
+        const imageWidth = expandImg.clientWidth;
+        imgText.style.marginRight = (width / 2 - imageWidth / 2).toString() + "px";
     }
 }
 
@@ -70,11 +74,22 @@ function resize() {
     const expandImg = document.getElementById("expandedImg");
     // Get the expanded image
     const imageContainer = document.getElementById("ImageContainer");
+    // Get the image text
+    const imgText = document.getElementById("imgText");
 
     if (width < 780) {
+        // Small screens
         const imageHeight = expandImg.clientHeight
         const top = (height - (imageHeight + 60)) / 2
         imageContainer.style.marginTop = top.toString() + "px";
+        imageContainer.style.height = "100%";
+        imgText.style.marginRight = "0";
+    } else {
+        // Big screens
+        imageContainer.style.height = (height * 0.94).toString() + "px";
+        const imageWidth = expandImg.clientWidth;
+        imgText.style.marginRight = (width / 2 - imageWidth / 2).toString() + "px";
+        imageContainer.style.marginTop = "0";
     }
 }
 
