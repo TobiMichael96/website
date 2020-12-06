@@ -101,8 +101,12 @@ window.onresize = function () {
 }
 
 window.onscroll = function () {
+    // Get the expanded image
+    const gallery = document.getElementById("gallery");
+    const visibilityGallery = window.getComputedStyle(gallery)['display'];
+
     // Save scroll position
-    if (document.scrollingElement.scrollTop > 0) {
+    if (document.scrollingElement.scrollTop > 0 && visibilityGallery === 'grid') {
         localStorage.setItem('scrollPosition', document.scrollingElement.scrollTop.toString())
     }
 }
