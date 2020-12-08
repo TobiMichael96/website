@@ -1,4 +1,4 @@
-function show(imgs) {
+function show(image) {
     // Get screen width
     const width = window.innerWidth
         || document.documentElement.clientWidth
@@ -15,15 +15,12 @@ function show(imgs) {
     const expandImg = document.getElementById("expandedImg");
     // Get the expanded image
     const imageContainer = document.getElementById("ImageContainer");
-    // Get the expanded image parent class name
-    const className = imgs.parentElement.className;
     // Get the image text
     const imgText = document.getElementById("imgText");
     // Use the same src in the expanded image as the image being clicked on from the grid
-    expandImg.src = imgs.src;
+    expandImg.src = image.src;
     // Use the value of the alt attribute of the clickable image as text inside the expanded image
-    imgText.innerHTML = imgs.alt;
-
+    imgText.innerHTML = image.alt;
 
     // Show the container element (hidden with CSS)
     imageContainer.parentElement.style.display = "block";
@@ -43,22 +40,14 @@ function show(imgs) {
 }
 
 function hide(image) {
-    // Get screen width
-    const width = window.innerWidth
-        || document.documentElement.clientWidth
-        || document.body.clientWidth;
-    // Get the gallery
+    // Get the home picture
     const home = document.getElementById("home");
     // Get the gallery
     const gallery = document.getElementById("gallery");
 
     gallery.style.display = "grid";
     home.style.display = "block";
-    image.style.display='none';
-
-    // if (width > 780) {
-    //     document.body.style.width = "calc(100vw - 34px)";
-    // }
+    image.style.display = "none";
 
     // Restore scroll position
     document.scrollingElement.scroll(0, localStorage.getItem('scrollPosition')|0)
@@ -109,4 +98,17 @@ window.onscroll = function () {
     if (document.scrollingElement.scrollTop > 0 && visibilityGallery === 'grid') {
         localStorage.setItem('scrollPosition', document.scrollingElement.scrollTop.toString())
     }
+}
+
+window.onload = function () {
+    // Get the home picture
+    const home = document.getElementById("home");
+    // Get the gallery
+    const gallery = document.getElementById("gallery");
+    // Get the loading spinner
+    const loader = document.getElementById("loader");
+
+    gallery.style.display = "grid";
+    home.style.display = "block";
+    loader.style.display = "none";
 }
